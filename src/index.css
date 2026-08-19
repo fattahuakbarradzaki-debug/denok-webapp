@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito+Sans:ital,opsz,wght@0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700&family=Poppins:wght@400;500;600;700;800;900&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --color-brand-900: #621905;
+  --color-brand-800: #7A2205;
+  --color-brand-600: #E75304;
+  --color-brand-500: #FB8806;
+  --color-brand-300: #FFBF15;
+  --color-warm-400: #FFD57D;
+  --color-warm-200: #FEE9CE;
+  --color-warm-100: #FFFCF7;
+  --color-neutral-900: #271C00;
+
+  --font-logo: 'Fredoka', sans-serif;
+  --font-heading: 'Poppins', sans-serif;
+  --font-body: 'Nunito Sans', sans-serif;
+
+  --radius-card: 16px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: #FFFCF7;
+  color: #271C00;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #FFBF15;
+  border-radius: 3px;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #E75304;
+}
+
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeSlideOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateY(-12px);
+  }
+}
+
+.slogan-enter {
+  animation: fadeSlideIn 0.5s ease forwards;
+}
+
+.slogan-exit {
+  animation: fadeSlideOut 0.5s ease forwards;
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.float-anim {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: scale(1.4);
+    opacity: 0;
+  }
+}
